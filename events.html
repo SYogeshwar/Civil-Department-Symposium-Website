@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colosseum 2k22</title>
+    <link rel="shortcut icon" href="https://www.cyberdudenetworks.com/client-login/assets/images/favicon.png"
+        type="image/x-icon">
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans&display=swap" />
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="./assets/css/util.css">
+    <link rel="stylesheet" href="./assets/css/css/animation.css">
+    <link rel="stylesheet" href="./assets/css/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color:white;
+
+}
+.events{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
+}
+.card-events{
+  margin-right: 3rem;
+    transform-style: preserve-3d;
+}
+
+.card-events .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+    box-shadow: 0 0 20px aqua;
+    padding: 20px 20px;
+}
+
+.card-events .box .body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.9s ease;
+}
+
+
+
+.card-events .box .body .imgcard-events{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.card-events .box .body .imgcard-events img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-events .box .body .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #595959;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+.card-events .box:hover .body{
+    transform: rotateY(180deg);
+}
+
+.card-events .box .body .content div{
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(45deg, #14adad,#00cccc);
+    transform: translateZ(100px);
+}
+
+.card-events .box .body .content div h3{
+    letter-spacing: 1px;
+    color:blue;
+}
+.card-img{
+  position: relative;
+}
+.card-img-div p{
+  position: absolute;
+  color:blue;
+  background-color:aqua;
+  padding: .2rem .5rem;
+  top: 50%;
+  left: 28%;
+  font-size: 1.5rem;
+  border-radius: 3px;
+}
+/* .more_details{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+  font-weight: 500;
+ font-size: 16px;
+ color:white;
+ padding: 9px 25px;
+    background-color :blue;
+    outline:none;
+    margin-right: 2rem;
+    border-radius: 20px;
+}
+.more_details:hover{
+  text-decoration: none;
+  background-color:aqua;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 0 20px white;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color:aqua;
+    color: blue;
+    border-radius:20px;
+} */
+.event-details{
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  margin-top: -4rem;
+  padding-bottom: 2rem;
+}
+.event-details button{
+  font-weight: 500;
+ font-size: 16px;
+ padding: 9px 25px;
+    background-color :blue;
+    outline:none;
+    border: none;
+    margin-right: 2rem;
+    cursor: pointer;
+    border-radius: 20px;
+
+
+}
+.event-details button:hover{
+  text-decoration: none;
+  background-color:aqua;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 0 20px white;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color:aqua;
+    color: blue;
+    border-radius:20px;
+}
+.event-details button a{
+  text-decoration: none;
+  color:white;
+
+}
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!---Header-->
+    <header>
+      <img src="./assets/css/images/RMK_Engineering_College_logo.gif" class="logo" alt="College Logo" width="140">
+      <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Aboutus.html">About</a></li>
+            <li><a href="./events.html">Events</a></li>
+            <li><a href="./rules.html">Rules</a></li>
+            <li><a href="http://rmkec.ac.in/cel/showtransportroutes.php?dept=transport">Bus Routes</a></li>
+
+        </ul>
+      </nav>
+      <!--<a href="./Contactus.html" class="button"><button><i class="fa fa-envelope"></i> Contact Us</button></a>-->
+      <a href="./contact.html" class="contactus"><i class="fa fa-envelope"></i> Contact Us</a> 
+    </header>
+    <!--End Header-->
+
+    <!--Content-->
+
+    <div class="events">
+ 
+ 
+  <div class="card-events d-flex align-items-center justify-content-center flex-wrap">
+      <div class="box">
+          <div class="body">
+              <div class="imgcard-events">
+                <div class="card-img-div">
+                  <img class="card-img" src="./assets/css/images/presentation-software-data-processing-classnotesng.jpg" alt="">
+                <!--<p>Hover me</p>-->
+                </div>
+              </div>
+              <div class="content d-flex flex-column align-items-center justify-content-center">
+                  <div>
+                      <h3 class="text-white fs-5">PAPER PRESENTATION</h3>
+                      <p class="fs-6 text-white">Participants have to present a paper related to civil engineering domain.<br>
+                        Presentation Duration Limit: 8min and 2mins for Queries
+                        Team Capacity: 2 to 3 members.
+                        
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="card-events d-flex align-items-center justify-content-center flex-wrap">
+    <div class="box">
+        <div class="body">
+            <div class="imgcard-events">
+              <div class="card-img-div">
+                <img class="card-img" src="./assets/css/images/autocad_background.jpg" alt="">
+                <!--<p>Hover me</p>-->
+              </div>
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+                <div>
+                    <h3 class="text-white fs-5">MAD ON CAD</h3>
+                    <p class="fs-6 text-white">Area to be drafted will be given.Participants should plan and draft the drawing using AutoCAD as per given specifications within the given time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-events d-flex align-items-center justify-content-center flex-wrap">
+  <div class="box">
+      <div class="body">
+          <div class="imgcard-events">
+            <div class="card-img-div">
+              <img class="card-img" src="./assets/css/images/Quiz_background.webp" alt="">
+              <!--<p>Hover me</p>-->
+            </div>
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div>
+                  <h3 class="text-white fs-5">STRUCT-QUIZ</h3>
+                  <p class="fs-6 text-white">Technical Quiz related to civil engineering topics.
+
+                    1st round will be slow paced
+                    2nd round will be fast paced.
+            
+                    Team Capacity Maximum 2.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card-events d-flex align-items-center justify-content-center flex-wrap">
+  <div class="box">
+      <div class="body">
+          <div class="imgcard-events">
+            <div class="card-img-div">
+              <img class="card-img" src="./assets/css/images/surprise-gift-box-vector-18200287.jpg" alt="">
+              <!--<p>Hover me</p>-->
+            </div>
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div>
+                  <h3 class="text-white fs-5">SUPRISE EVENT</h3>
+                  <p class="fs-6 text-white">Catch us on Event Day it would be super fun!!</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="card-events d-flex align-items-center justify-content-center flex-wrap">
+  <div class="box">
+      <div class="body">
+          <div class="imgcard-events">
+            <div class="card-img-div">
+              <img class="card-img" src="./assets/css/images/concrete-vessel-big-ship-made-concrete-floating-river-134931140.jpg" alt="">
+              <!--<p>Hover me</p>-->
+            </div>
+          </div>
+          <div class="content d-flex flex-column align-items-center justify-content-center">
+              <div>
+                  <h3 class="text-white fs-5">CRAFT THE CRUISE</h3>
+                  <p class="fs-6 text-white">Participants have to design a boat using concrete and other materials and submit it during the event. Dimensions specified must be within limit. Participants are requested to upload detailed pictorial at different stages during the build process.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+    </div>
+    <div class="event-details">
+      <button class="more_details"><a href="https://docs.google.com/document/d/1lFKRAgrRFi8QBmz79RLrBeCyG10AEb1XUA7ajGs53l0/edit?usp=sharing">Detailed Description of events<br>Click Here</a></button>
+  <button class="more_details"><a href="https://docs.google.com/document/d/1ud0tp_Ln1evXVndIHng7okZfUcB3AEGl/edit?usp=sharing&ouid=117049447528453816146&rtpof=true&sd=true">Event Co-ordinators<br>Contact Details</a></button>
+  
+    </div>
+    </body>
+</html>

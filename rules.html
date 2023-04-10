@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/47829851ea.js" crossorigin="anonymous"></script>
+    <title>Colosseum 2k22</title>
+    <link rel="shortcut icon" href="https://www.cyberdudenetworks.com/client-login/assets/images/favicon.png"
+        type="image/x-icon">
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7COpen+Sans&display=swap" />
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="./assets/css/util.css">
+    <link rel="stylesheet" href="./assets/css/css/animation.css">
+    <link rel="stylesheet" href="./assets/css/css/style.css">
+
+    <style>
+
+        .rules{
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            height: 20rem;
+            text-align: start;
+            padding: 5rem;
+        }
+        .rules h3{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration:underline;
+        }
+        .norms{
+            margin-right: 2rem;
+
+        }
+        .rules ol li,.norms ol li{
+            font-size: 1.5rem;
+            text-shadow: 3px 3px 5px rgb(37, 162, 194);
+        }
+        .rules,.norms{
+            
+            cursor: pointer;
+            height: fit-content;
+            color: aliceblue;
+            box-shadow: 0 0 20px white;
+            transform: translateZ(20px);
+            transform-style: preserve-3d;
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            place-items: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            background: -webkit-linear-gradient(to right, #2985ad, #3a9bef);
+            background: -moz-linear-gradient(to right, #0681ae, #071f49);
+            background: -ms-linear-gradient(to right, #7793ec, #176d81);
+            background: -o-linear-gradient(to right, #1f16d6, #3b6bd4);
+            background: linear-gradient(to right, #169285, #131cbd);
+        }
+        ol{
+            list-style-type: circle;
+        }
+        @media only screen and (max-width: 1000px) {
+            .rules-and-norms{
+                flex-direction: column;
+                margin-top: 5rem;
+            }
+            .rules,.norms{
+                width: 80%;
+                height: fit-content;
+                flex-direction: column;
+                margin-bottom: 2rem;
+            }
+            .norms{
+            margin-right: 0rem;
+        }
+        .rules ol li,.norms ol li{
+            font-size: 1rem;
+        }
+        .rules{
+            flex-direction: column;
+        }
+        }
+        @media only screen and (max-width: 500px) {
+            .rules,.norms{
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Istronics2022</title>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <header>
+            <img src="./assets/css/images/RMK_Engineering_College_logo.gif" class="logo" alt="College Logo" width="140">
+            <nav>
+              <ul>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./Aboutus.html">About</a></li>
+                  <li><a href="./events.html">Events</a></li>
+                  <li><a href="./rules.html">Rules</a></li>
+                  <li><a href="http://rmkec.ac.in/cel/showtransportroutes.php?dept=transport">Bus Routes</a></li>
+      
+              </ul>
+            </nav>
+            <!--<a href="./Contactus.html" class="button"><button><i class="fa fa-envelope"></i> Contact Us</button></a>-->
+            <a href="./contact.html" class="contactus"><i class="fa fa-envelope"></i> Contact Us</a> 
+          </header>
+          <main class="content">
+                <div class="rules">
+                    <h3 style="text-align: center;">Rules</h3>
+                    <ol>
+                        <li class=""> Participants are requested to wear formals compulsorily.</li>
+                        <li class="">Clean Shave is must for boys </li>
+                        <li class="">Kurtis with dupatta is must be must for girls</li>
+                        <li class="">Usage of mobile phone is not permitted inside the campus.</li>
+                        <li class="">The decision of jury will be final.</li>
+                        <li class="">Participation in atleast one technical event is mandatory.</li>
+                        <li class="">Team not following the rules will be disqualified without any intimation.</li>
+                    </ol>
+                </div>
+          </main>
+    
+
+        
+    </div>
+    <script>
+        let card1  = document.querySelector('.norms');
+  document.addEventListener('mousemove', function (e) {
+   try{
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 40;
+    let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+    card1.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+   }
+   catch(err){
+    console.log(err);
+
+    console.log("Oops!");
+   }
+});
+
+let card2  = document.querySelector('.rules');
+  document.addEventListener('mousemove', function (e) {
+    try{
+      let xAxis = (window.innerWidth / 2 - e.pageX) / 40;
+      let yAxis = (window.innerHeight / 2 - e.pageY) / 20;
+      card2.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+     }
+     catch(err){
+        console.log(err);
+     }
+});
+    </script>
+    <script src="./app.js"></script>
+</body>
+</html>
